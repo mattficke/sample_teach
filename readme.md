@@ -24,6 +24,12 @@ Route = **Method + Path**
 ## MVC
 Model, View, Controller
 
+### Model
+Represents our data as an object. Will cover in more detail when we get into ORMs like ActiveRecord.
+
+### View
+Displays information to the user based on information retrieved from the model.
+
 ### Controller
 Interacts with the model, by retrieving data or updating it
 
@@ -34,10 +40,10 @@ get "/" do
 end
 ```
 
-### We do: /new, /:name
+### We do: /zip, /:name
 ```ruby
 get "/zip" do
-  erb :new
+  erb :zip
 end
 
 get "/:name" do
@@ -45,6 +51,13 @@ get "/:name" do
   erb :hello
 end
 ```
+
+```html
+<!-- hello.erb -->
+<h1>Hello, <%= @name %></h1>
+
+```
+
 
 ### You do: post
 ```ruby
@@ -55,20 +68,8 @@ end
 ```
 
 
-### Model
-Represents our data as an object. Will cover in more detail when we get into ORMs like ActiveRecord.
-
-### View
-Displays information to the user based on information retrieved from the model.
-
 ```html
-<!-- hello.erb -->
-<h1>Hello, <%= @name %></h1>
-
-```
-
-```html
-<!-- new.erb -->
+<!-- zip.erb -->
 <form method="post" action="/">
   <input type="text" name="zipcode" placeholder="zip code">
   <input type="submit">
