@@ -8,6 +8,22 @@
 
 ## REST
 Stands for REpresentational State Transfer. It is a convention for making HTTP requests.
+
+- `GET`
+- `POST`
+- `PUT`
+- `PATCH`
+- `DELETE`
+
+Remember **CRUD**? What does it stand for?
+
+- Create
+- Read
+- Update
+- Delete
+
+Are there any similarities here?
+
 ### RESTful Routes
 Route = **Method + Path**
 - `GET /articles` --> retrieve all articles
